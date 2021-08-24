@@ -1,1 +1,26 @@
-<p>modal-new-game works!</p>
+
+<div class="modal-container">
+	<div class="modal-container__body mat-app-background">
+		<h1 mat-dialog-title class="modal-container__title">Начало игры</h1>
+		<div mat-dialog-content class="modal-container__text">Вам необходимо загадать в уме
+			число и наши экстрасенсы попробуют его отгадать.
+			Загадайте число и нажмите кнопку "продолжить".
+		</div>
+		<div mat-dialog-actions class="dialog-button">
+			<button mat-button
+					mat-raised-button
+					color="primary"
+					class="dialog-button__butt"
+					(click)="assentMolal()"
+			>
+				Продолжить
+			</button>
+			<button mat-button
+					class="dialog-button__butt"
+					(click)="closeMolal()"
+			>
+				Отмена
+			</button>
+		</div>
+	</div>
+</div>

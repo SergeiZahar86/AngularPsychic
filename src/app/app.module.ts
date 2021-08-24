@@ -14,6 +14,14 @@ import { ModalEndGameComponent } from './gaming-board/modal-end-game/modal-end-g
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import { CardComponent } from './gaming-board/card/card.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {MatOptionModule} from "@angular/material/core";
+import {ApiService} from "./shared/api.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,19 +29,27 @@ import {MatButtonModule} from "@angular/material/button";
     GamingBoardComponent,
     HeaderComponent,
     ModalNewGameComponent,
-    ModalEndGameComponent
+    ModalEndGameComponent,
+    CardComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatButtonToggleModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule
-  ],
-  providers: [],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MatSliderModule,
+		MatButtonToggleModule,
+		MatToolbarModule,
+		MatIconModule,
+		MatButtonModule,
+		MatDialogModule,
+		MatFormFieldModule,
+		MatSelectModule,
+		MatOptionModule,
+		HttpClientModule,
+		FormsModule
+	],
+  providers: [ApiService],
+	//providers: [{provide: HttpClient, useClass: ApiService},],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

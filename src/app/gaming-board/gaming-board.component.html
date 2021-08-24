@@ -1,7 +1,52 @@
-<app-header></app-header>
-<div class="marg">
-  <h1>hello</h1>
+<div class=" bordgame">
+	<app-header></app-header>
+	<div class="bordgame__body">
+		<div class="bordgame__row">
+			<div class="bordgame__column">
+				<app-card [psychicMan]="psychicMen && psychicMen[0]"></app-card>
+			</div>
+			<div class="bordgame__column">
+				<app-card [psychicMan]="psychicMen && psychicMen[1]"></app-card>
+			</div>
+			<div class="bordgame__column">
+				<app-card [psychicMan]="psychicMen && psychicMen[2]"></app-card>
+			</div>
+		</div>
+		<div class="bordgame__player">
+			<div class="bordgame__secret">
+				<div class="secret">
+					<div class="secret__text">Список загаданных чисел</div>
+					<div class="secret__valeu">{{playerNumbers}}</div>
+				</div>
+				<div class="button_game">
+					<button mat-raised-button color="primary"
+							class="button_game__play"
+							(click)="showModalNewGame()"
+					>
+						Играть
+					</button>
+					<button mat-raised-button color="primary"
+							class="button_game__play"
+							(click)="showModalEndGame()"
+					>
+						Ввести загаданное число
+					</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<app-modal-new-game
+		*ngIf="isModalNewGame"
+		(isConfirmed)="closeModalNewGame($event)"
+		(emitReload)="reload()"
+	></app-modal-new-game>
+
+	<app-modal-end-game
+		*ngIf="isModalEndGame"
+		(isConfirmedEnd)="closeModalEndGame($event)"
+		(emitReload)="endGame($event)"
+	></app-modal-end-game>
 </div>
-
-
-

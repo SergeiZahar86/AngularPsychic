@@ -1,0 +1,63 @@
+.psychic{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+  height: 100%;
+  box-shadow: 1px 0px 17px 9px rgba(13, 13, 13, 0.27);
+  .psychic__name{
+	font-size: 40px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+  }
+  .psychic-auth-row{
+	display:flex;
+	.psychic__authenticity_valeu{
+	  font-size: 34px;
+	  font-weight: 700;
+	  letter-spacing: 4px;
+	  color: #e2ff40;
+	}
+	.psychic__authenticity_text{
+	  font-size: 24px;
+	  font-weight: 500;
+	  text-transform: uppercase;
+	  letter-spacing: 3px;
+	  margin-left: 20px;
+	}
+
+  }
+  .psychic__guesses_text{
+	font-size: 24px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+  }
+  .psychic__guesses_valeu{
+	font-size: 34px;
+	font-weight: 700;
+	letter-spacing: 6px;
+	margin-top: -55px;
+	overflow-x: auto;
+	line-height: 50px;
+	max-width: 200px;
+  }
+  .psychic-guess-row{
+	display:flex;
+
+	.psychic__guess_text{
+	  font-size: 24px;
+	  font-weight: 500;
+	  text-transform: uppercase;
+	  letter-spacing: 3px;
+	  margin-left: 20px;
+	}
+	.psychic__guess_valeu{
+	  font-size: 34px;
+	  font-weight: 700;
+	  color: #e2ff40;
+	}
+
+  }
+}

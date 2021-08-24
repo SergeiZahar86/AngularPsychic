@@ -1,3 +1,65 @@
-.marg{
-  margin: 50px;
+.bordgame{
+  height: 100%;
+  position: relative;
+  .bordgame__body{
+    height: 90%;
+    .bordgame__row{
+      display: flex;
+      height: 50%;
+      justify-content:space-around;
+      .bordgame__column{
+        width: 33.333%;
+        padding-top: 30px;
+        width: 27%;
+      }
+    }
+    .bordgame__player{
+      height: 50%;
+      .bordgame__secret{
+        display: flex;
+        flex-direction:column;
+        justify-content:space-around;
+        align-items:center;
+        height: 70%;
+
+      }
+    }
+  }
 }
+.secret{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+  .secret__text{
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 20px;
+
+  }
+  .secret__valeu{
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-top: 30px;
+    overflow-x: auto;
+    line-height: 50px;
+    max-width: 600px;
+  }
+}
+.button_game{
+  .button_game__play{
+
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    width: 350px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+
+
