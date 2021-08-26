@@ -76,12 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AngularPsychic:build:production",
-              "ssl": true
+              "browserTarget": "AngularPsychic:build:production"
             },
             "development": {
-              "browserTarget": "AngularPsychic:build:development",
-              "ssl": true
+              "browserTarget": "AngularPsychic:build:development"
 
             }
           },
