@@ -13,17 +13,19 @@ RUN npm run build -- --outputPath=./dist/out --configuration $configuration
 
 
 # stage 2, Используем скомпилированое приложение, готовое к производству с Nginx
-FROM nginx:1.8-alpine
-#COPY dist/AngularPsychic /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/nginx.conf
+#FROM nginx:1.8-alpine
+##COPY dist/AngularPsychic /usr/share/nginx/html
+#COPY nginx.conf /etc/nginx/nginx.conf
+
+
 #COPY --from=build /app/dist/AngularPsychic /usr/share/nginx/html
 COPY --from=build /app/dist/out/ /usr/share/nginx/html
 #RUN rm /etc/nginx/conf.d/default.conf
 #COPY data/nginx/nginx.conf /etc/nginx/conf.d
 
-EXPOSE 80
+#EXPOSE 80
 #EXPOSE 443
-CMD ["nginx", "-g", "daemon off;"]
+#CMD ["nginx", "-g", "daemon off;"]
 
 # установка сомозаверяющегося ssl сертификата
 #RUN apk update
